@@ -1,0 +1,17 @@
+.header {
+    width: 50%;
+    margin-left: 50%;
+    margin-top: 60px;
+    transform: translateX(-50%);
+}
+
+.header div{
+    text-align: center;
+    padding-top: 5px;
+    font-size: 22px;
+}
+
+.header div.aadl {
+    display: flex;
+    justify-content: space-evenly;
+}

@@ -1,0 +1,86 @@
+/* Styles for the steps component */
+
+.steps-container {
+    padding: 20px;
+    background-color: #f9f9f910;
+    backdrop-filter: blur(15px);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.step-number {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+}
+
+.step-number::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #ddd;
+}
+
+.step-number::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: var(--percent);
+    height: 2px;
+    background-color: #007bff;
+    transition: all .6s;
+}
+
+.step-number__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: #ddd;
+    color: #aaa;
+    border-radius: 50%;
+    font-weight: bold;
+    border: 2px solid #ddd;
+    transition: .2s;
+    z-index: 1;
+}
+
+.step-number__item.active {
+    background-color: #007bff;
+    color: #fff;
+    border: 2px solid #007bff;
+}
+
+.step-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.steps-content {
+    display: flex;
+    transition: .4s;
+}
+
+.steps-content .steps-content__item {
+    width: 100%;
+}
+
+.step-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.step-description {
+    font-size: 14px;
+    color: #666;
+}
